@@ -9,7 +9,11 @@ const PORT = 3000;
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors()); // This allows all origins by default
+app.use(cors({
+  origin: 'https://eclectic-rolypoly-124fc3.netlify.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true // only if using cookies/sessions
+}));; // This allows all origins by default
 
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://yabuman155:2xbvtWHwZMKWLrs2@cluster0.y5ry0lq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
