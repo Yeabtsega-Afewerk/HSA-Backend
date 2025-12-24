@@ -13,8 +13,7 @@ app.use(cors({
   origin: 'https://eclectic-rolypoly-124fc3.netlify.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   credentials: true // only if using cookies/sessions
-}));; // This allows all origins by default
-
+}));
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://yabuman155:2xbvtWHwZMKWLrs2@cluster0.y5ry0lq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 
@@ -248,3 +247,4 @@ app.get('/student/performance/:id', async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
