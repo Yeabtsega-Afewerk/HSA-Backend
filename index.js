@@ -15,7 +15,16 @@ app.use(cors({
   credentials: true // only if using cookies/sessions
 }));
 // Connect to MongoDB
-const uri = "mongodb+srv://yabuman155:<db_password>@cluster0.y5ry0lq.mongodb.net/?appName=Cluster0";
+// Connect to MongoDB
+require('dotenv').config();
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.MONGO_URI=mongodb+srv://yabuman155:<db_password>@cluster0.y5ry0lq.mongodb.net/?appName=Cluster0  , {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('MongoDB connected'))
+.catch(err => console.error('MongoDB connection error:', err));
 
 // Schemas
 const userSchema = new mongoose.Schema({
