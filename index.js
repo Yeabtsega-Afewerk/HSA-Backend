@@ -15,7 +15,7 @@ app.use(cors({
   credentials: true // only if using cookies/sessions
 }));
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://yabuman155:<db_password>@cluster0.y5ry0lq.mongodb.net/?appName=Cluster0');
+mongoose.connect('mongodb+srv://yabuman155:2xbvtWHwZMKWLrs2@cluster0.y5ry0lq.mongodb.net/?appName=Cluster0');
 
 // Schemas
 const userSchema = new mongoose.Schema({
