@@ -19,8 +19,8 @@ app.use(cors({
 // Connect to MongoDB
 
 mongoose.connect('mongodb+srv://yabuman155:i3SPdqPd9FvyoQyH@cluster0.y5ry0lq.mongodb.net/?appName=Cluster0');
-.then(() => console.log('MongoDB Connected!'))
-  .catch(err => console.log('DB Error:', err.message));
+//.then(() => console.log('MongoDB Connected!'))
+  //.catch(err => console.log('DB Error:', err.message));
 // Schemas
 const userSchema = new mongoose.Schema({
   username: String,
