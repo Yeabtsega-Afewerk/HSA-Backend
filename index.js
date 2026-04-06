@@ -17,7 +17,8 @@ app.use(cors({
 
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://yabuman155:i3SPdqPd9FvyoQyH@cluster0.y5ry0lq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
+mongodb+srv://yabuman155:<db_password>@cluster0.y5ry0lq.mongodb.net/?appName=Cluster0
+mongoose.connect('mongodb+srv://yabuman155:i3SPdqPd9FvyoQyH@cluster0.y5ry0lq.mongodb.net/?appName=Cluster0');
 
 // Schemas
 const userSchema = new mongoose.Schema({
